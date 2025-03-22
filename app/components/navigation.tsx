@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation"
+import { SignInButton } from "@clerk/nextjs";
 
 export const Navigation = () => {
     const pathname = usePathname()
@@ -13,13 +14,13 @@ export const Navigation = () => {
                 Home
             </Link>
             <Link 
-                href="/" 
+                href="/about" 
                 className={pathname === "/about" ? "font-bold mr-4" : "text-blue-500 mr-4"}
             >
                 About
             </Link>
             <Link 
-                href="/" 
+                href="/products/1" 
                 className={
                     pathname.startsWith("/products/1") ? "font-bold mr-4" : "text-blue-500 mr-4"
                 }
